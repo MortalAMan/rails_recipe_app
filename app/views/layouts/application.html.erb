@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DplRecipes</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><%= link_to 'Recipes', recipes_path %></li>
+          <li><%= link_to 'Ingredients', ingredients_path %></li>
+          <li><%= link_to 'Add Ing To Rec', new_recipe_ingredient_path %></li>
+        </ul>
+        <ul class="side-nav" id="mobile">
+          <li><%= link_to 'Recipes', recipes_path %></li>
+          <li><%= link_to 'Ingredients', ingredients_path %></li>
+          <li><%= link_to 'Add Ing To Rec', new_recipe_ingredient_path %></li>
+        </ul>
+      </div>
+    </nav>    
+    <%= yield %>
+  </body>
+</html>
